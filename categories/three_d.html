@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maksolotle - категории</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery.js"></script>
+
+</head>
+	<div>
+		<header id="header">
+			<center>
+
+				<button class="but"><a class="a" href="https://t.me/Maksolotle_arts" target="_blank"> ТЕЛЕГРАМ</a></button>
+				<button class="but"><a class="a" href="https://www.youtube.com/@Maksolotle" target="_blank"> ЮТУБ</a></button>
+
+	
+
+					<input id="text" type="text" name="q" placeholder="Что ищем?" autocomplete="off" required="" minlength="3" maxlength="30" value=""><button id="but_search"><img id="img" src="assets/media/search.png" width="30px"></button>
+				</center>
+			</header>
+
+<article id="ARTICLE_1">
+	<div id="DIV_2">
+		<img id="IMG_3" src="assets/Supra.jpg" alt="Supra - 3D модель" />
+	</div>
+	<div id="DIV_4">
+		<h1 id="H1_5">
+			<a href="three_d/Supra.html" id="A_6">Supra - 3D модель</a>
+		</h1>
+		<div id="DIV_7">
+			 <span id="SPAN_8">16.11.2023</span> 
+	        </div>
+		<blockquote id="BLOCKQUOTE_14">
+			<p id="P_15">
+				Моя 3д модель сделана за 17ч!<br id="BR_16" />Имеет неплохой дизайн как для новичка. <span id="SPAN_17"><strong id="STRONG_18">Supra</strong></span> Покрашена в золотисто-оранжевый цвет).<br id="BR_19" />Возможно будет добавлена в мою игру.
+			</p>
+		</blockquote>
+	</div>
+</article>
+
+    <script>
+        $(document).ready(function() {
+            $('#but_search').click(function() {
+                // Получаем значение из input
+                var searchText = $('#text').val().toLowerCase();
+
+                // Получаем все элементы с id, начинающимся на "ARTICLE_"
+                $('[id^="ARTICLE_"]').each(function() {
+                    // Получаем текст заголовка (h1)
+                    var title = $(this).find('h1').text().toLowerCase();
+
+                    // Проверяем, содержит ли заголовок введенный текст
+                    if (title.includes(searchText)) {
+                        // Если да, отображаем элемент
+                        $(this).show();
+                    } else {
+                        // Если нет, скрываем элемент
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>

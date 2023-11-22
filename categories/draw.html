@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Maksolotle - категории</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery.js"></script>
+
+</head>
+	<div>
+		<header id="header">
+			<center>
+
+				<button class="but"><a class="a" href="https://t.me/Maksolotle_arts" target="_blank"> ТЕЛЕГРАМ</a></button>
+				<button class="but"><a class="a" href="https://www.youtube.com/@Maksolotle" target="_blank"> ЮТУБ</a></button>
+
+	
+
+					<input id="text" type="text" name="q" placeholder="Что ищем?" autocomplete="off" required="" minlength="3" maxlength="30" value=""><button id="but_search"><img id="img" src="assets/media/search.png" width="30px"></button>
+				</center>
+			</header>
+
+<article id="ARTICLE_1">
+	<div id="DIV_2">
+		<img id="IMG_3" src="assets/Subaru.jpg" alt="Subaru - Рисунок" />
+	</div>
+	<div id="DIV_4">
+		<h1 id="H1_5">
+			<a href="draw/Subaru.html" id="A_6">Subaru - Рисунок</a>
+		</h1>
+		<div id="DIV_7">
+			 <span id="SPAN_8">16.11.2023</span> 
+	        </div>
+		<blockquote id="BLOCKQUOTE_14">
+			<p id="P_15">
+				Мой рисунок Субару<br id="BR_16" />Рисовал около 5-7ч.  Сам рисунок для ютубера/программиста Хауди Хо.<br id="BR_19" />
+			</p>
+		</blockquote>
+	</div>
+</article>
+
+	<div id="pixilart">
+		<article id="ARTICLE_1">
+			<div id="DIV_2">
+				<img id="IMG_3" src="assets/pixilart.jpg" alt="Pixilart - Сайт для рисования пиксель-артов" />
+			</div>
+			<div id="DIV_4">
+				<h1 id="H1_5">
+					<a href="draw/pixilart.html" id="A_6">Pixilart - Сайт для рисования пиксель-артов</a>
+				</h1>
+				<div id="DIV_7">
+					 <span id="SPAN_8">20.11.2023</span> 
+			        </div>
+				<blockquote id="BLOCKQUOTE_14">
+					<p id="P_15">
+						В этом сайте я сам работал.<br id="BR_16" />Большое количество инструментов и палитра. <br> Всем советую👍<br id="BR_19" />
+					</p>
+				</blockquote>
+			</div>
+		</article>
+	</div>
+
+    <script>
+        $(document).ready(function() {
+            $('#but_search').click(function() {
+                // Получаем значение из input
+                var searchText = $('#text').val().toLowerCase();
+
+                // Получаем все элементы с id, начинающимся на "ARTICLE_"
+                $('[id^="ARTICLE_"]').each(function() {
+                    // Получаем текст заголовка (h1)
+                    var title = $(this).find('h1').text().toLowerCase();
+
+                    // Проверяем, содержит ли заголовок введенный текст
+                    if (title.includes(searchText)) {
+                        // Если да, отображаем элемент
+                        $(this).show();
+                    } else {
+                        // Если нет, скрываем элемент
+                        $(this).hide();
+                    }
+                });
+            });
+        });
+    </script>
