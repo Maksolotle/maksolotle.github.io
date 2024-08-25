@@ -1,6 +1,7 @@
 body {
-     /*background-color: #14171a;*/
+     background-color: #14171a;
      background-image: url(assets/media/wallpaper.jpg);
+     background-repeat: no-repeat;
 }
 
 
