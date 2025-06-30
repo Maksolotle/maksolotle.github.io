@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" lang="ru" style="zoom: 1;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>𝗦𝗽𝗲𝗲𝗱 𝗟𝗶𝗺𝗶𝘁𝘀</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="og:type" content="website">
+
+<link rel="icon" type="image/png" href="./DEMO_files/IMAGES&VIDEOS/SL.png">
+
+<link rel="stylesheet" type="text/css" href="./DEMO_files/CSS/all.css">
+<link rel="stylesheet" type="text/css" href="./DEMO_files/CSS/animations.css">
+<link rel="stylesheet" type="text/css" href="./DEMO_files/CSS/buttons.css">
+<link rel="stylesheet" type="text/css" href="./DEMO_files/CSS/main.css">
+
+<link rel="stylesheet" href="./DEMO_files/CSS/download.css"></head>
+
+<body class="ready">
+
+<header id="download-header">
+	<div class="header-background-container">
+		<div class="header-background" style="background-image: url(DEMO_files/IMAGES&VIDEOS/Nissan.png);"></div>
+	</div>
+	<div class="header-content-container">
+		<div class="header-content">
+			<div class="graffiti-title">Speed Limits</div>
+
+			<div class="content-text small">
+			<pre>Свой NFS на Unity! :3
+
+С открытым миром, сюжетом и кучей машин
+			</pre>
+			</div>
+		</div>
+	</div>
+</header>
+<article id="download-article">
+	<div class="spacer tiny"></div>
+				<a aria-title="" href="https://drive.google.com/file/d/1eTjwgZ1ohlVzJiHShovKZrQeN1fpGTTF/view?usp=drive_link" class="block" tabindex="-1">
+				<button id="start-download-button" class="gradient color-text larger long no-margin no-side-margin highlight-animation"><div class="text"><i class="icon icon-apple"></i> Скачать для macOS — 1,76 GB (ZIP)</div><i class="loader icon-spin6"></i></button>
+			</a>
+							<div class="spacer tiny"></div>
+							<a aria-title="" href="https:" class="block" tabindex="-1">
+				<button id="start-download-button" class="gradient color-text larger long no-margin no-side-margin white" ><div class="text"><i class="icon icon-windows"></i> Скачать для Windows — 151.62 MB</div><i class="loader icon-spin6"></i></button>
+			</a>
+				<div id="details" class="title small text-start">Info</div>
+	<div class="sub-title small small-margin text-start">Pre-Release - June 30, 2025</div>
+	<div class="sub-title small small-margin text-start">Made with Unity Game Engine</div>
+	<div class="sub-title small small-margin text-start">------------------------</div>
+	<div class="sub-title small small-margin text-start">System Requirements</div>
+	<div class="sub-title small small-margin text-start">Minimum:</div>
+	<div class="sub-title small small-margin text-start">Requires a 64-bit processor and operating system</div>
+	<div class="sub-title small small-margin text-start">OS: Windows 10</div>
+	<div class="sub-title small small-margin text-start">Processor: Core i3-1005G1</div>
+	<div class="sub-title small small-margin text-start">Memory: 6 GB RAM</div>
+	<div class="sub-title small small-margin text-start">Graphics: UHD Graphics</div>
+	<div class="sub-title small small-margin text-start">Storage: 4,5 GB available space (without .zip)</div>
+	<div class="sub-title small small-margin text-start">© Maksolotle 2025</div>
+
+
+	<section class="screenshot-gallery">
+	<div class="gallery-title">Screenshots & Videos</div>
+	<div class="screenshots">
+		<!-- photo -->
+		<img src="./DEMO_files/IMAGES&VIDEOS/screen1.jpg" alt="Screenshot 1" onclick="openLightboxImage(this.src)">
+		
+		<!-- video -->
+		<img src="./DEMO_files/IMAGES&VIDEOS/preview1.png" alt="Video 1" onclick="openLightboxVideo('./DEMO_files/IMAGES&VIDEOS/intro.mp4')">
+
+		<img src="./DEMO_files/IMAGES&VIDEOS/screen2.jpg" alt="Screenshot 2" onclick="openLightboxImage(this.src)">
+	</div>
+	</section>
+
+	<!-- Lightbox Overlay -->
+	<div id="lightbox" onclick="closeLightbox()">
+	<img id="lightbox-img" src="" alt="screenshot" style="display: none;">
+	<video id="lightbox-video" controls style="display: none;"></video>
+	</div>
+
+	<script>
+	function openLightboxImage(src) {
+		const lb = document.getElementById('lightbox');
+		const img = document.getElementById('lightbox-img');
+		const video = document.getElementById('lightbox-video');
+
+		img.src = src;
+		img.style.display = 'block';
+		video.style.display = 'none';
+		video.pause();
+
+		lb.style.display = 'flex';
+		setTimeout(() => lb.classList.add('visible'), 10);
+	}
+
+	function openLightboxVideo(videoSrc) {
+		const lb = document.getElementById('lightbox');
+		const img = document.getElementById('lightbox-img');
+		const video = document.getElementById('lightbox-video');
+
+		video.src = videoSrc;
+		video.style.display = 'block';
+		img.style.display = 'none';
+
+		lb.style.display = 'flex';
+		setTimeout(() => lb.classList.add('visible'), 10);
+		video.play();
+	}
+
+	function closeLightbox() {
+		const lb = document.getElementById('lightbox');
+		const img = document.getElementById('lightbox-img');
+		const video = document.getElementById('lightbox-video');
+
+		lb.classList.remove('visible');
+		setTimeout(() => {
+		lb.style.display = 'none';
+		img.src = '';
+		video.pause();
+		video.currentTime = 0;
+		video.src = '';
+		}, 300);
+	}
+	</script>
+
+
+</html>

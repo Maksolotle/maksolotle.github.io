@@ -1,0 +1,44 @@
+@keyframes spin
+{
+	0%
+	{
+		transform: rotateZ(0deg);
+	}
+	100%
+	{
+		transform: rotateZ(360deg);
+	}
+}
+@keyframes highlight-animation
+{
+	0%
+	{
+		box-shadow: 0 0 0 0 rgb(150, 63, 226);
+	}
+	100%
+	{
+		box-shadow: 0 0 0 .5rem rgba(167, 32, 212, 0);
+	}
+}
+@keyframes highlight-yellow-animation
+{
+	0%
+	{
+		box-shadow: 0 0 0 0 rgb(255, 192, 0);
+	}
+	100%
+	{
+		box-shadow: 0 0 0 .5rem rgba(32, 92, 212, 0);
+	}
+}
+@keyframes highlight-white-animation
+{
+	0%
+	{
+		box-shadow: 0 0 0 0 rgb(192, 192, 192);
+	}
+	100%
+	{
+		box-shadow: 0 0 0 .5rem rgba(32, 92, 212, 0);
+	}
+}

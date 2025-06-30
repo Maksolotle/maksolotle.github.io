@@ -1,0 +1,191 @@
+body > header
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.screenshot-gallery {
+  padding: 40px 20px;
+  background: #000000;
+  text-align: center;
+}
+
+.gallery-title {
+  font-family: 'Street-Graffity', sans-serif;
+  font-size: 42px;
+  color: #eb00f7;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px black;
+}
+
+.screenshots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.screenshots img {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshots img:hover {
+  transform: scale(1.05);
+}
+.screenshot-gallery {
+  padding: 40px 20px;
+  background: #000000;
+  text-align: center;
+}
+.gallery-title {
+  font-family: 'Street-Graffity', sans-serif;
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgb(56, 56, 56);
+}
+.screenshots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.screenshots img {
+  width: 450px;
+  max-width: 95vw;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.screenshots img:hover {
+  transform: scale(1.05);
+}
+
+#lightbox {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#lightbox.visible {
+  display: flex;
+  opacity: 1;
+}
+
+#lightbox img,
+#lightbox video {
+  max-width: 95vw;
+  max-height: 95vh;
+  border-radius: 12px;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+
+
+@font-face {
+  font-family: 'Street-Graffity';
+  src: url('FONTS/Street-Graffity.ttf') format('truetype');
+}
+#header {
+    height: 80px;
+    background-color: #0c1013;
+    -webkit-box-shadow: 0 0 19px 2px rgba(255, 255, 255, 0.91);
+    box-shadow: 0 0 19px 2px black;
+    z-index: 100;
+}
+
+.graffiti-title {
+  font-family: 'Street-Graffity', sans-serif;
+  font-size: 100px;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(143, 143, 143, 0.6);
+  letter-spacing: 2px;
+  bottom: calc(15% + 8rem);
+  left: 5%;
+  width: 32rem;
+  margin-left: 3%;
+  margin-top: 15rem;
+}
+
+
+body{
+	background-color: black;
+}
+body > header > div.header-content-container > div.header-content > div.content-text
+{
+	bottom: calc(15% + 8rem);
+	left: 5%;
+	width: 32rem;
+}
+body > header > div.header-content-container > div.header-content > div.content-text.small
+{
+	bottom: calc(15% + 5rem);
+	width: 18rem;
+}
+body > header > div.header-content-container > div.header-content button
+{
+	position: absolute;
+	bottom: 15%;
+	left: 5%;
+	width: unset;
+	min-width: 12rem;
+	margin: 0;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+body > article#download-success-article,
+body > article#download-article
+{
+	margin-left: 5rem;
+	margin-right: 5rem;
+}
+body > article div.title,
+body > article div.sub-title,
+body > article div.paragraph
+{
+	margin-left: 0;
+	margin-right: 0;
+}
+body > article div.paragraph
+{
+	max-width: 25rem;
+}
+body > article#download-article div.checkbox ~ div.checkbox-label
+{
+	max-width: 25rem;
+}
+body > article#download-success-article div.thumbnail > div.text
+{
+	opacity: 1;
+	font-weight: 300;
+	text-shadow: 0 0 .25rem black;
+}
+body > article#download-success-article div.thumbnail:first-of-type
+{
+	margin-left: 0;
+}
+body > article#download-success-article div.thumbnail:last-of-type
+{
+	margin-right: 0;
+}
