@@ -127,7 +127,7 @@ body {
 
 #main {
   height: 750px;
-  background-image: url('categories/programming/DEMO_files/IMAGES&VIDEOS/Nissan.png');
+  background-image: url('assets/media/background.jpg');
   background-size: cover;
   background-position: center 0%;
   background-repeat: no-repeat;
