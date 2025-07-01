@@ -35,19 +35,14 @@ body > header
 
 .screenshots img:hover {
   transform: scale(1.05);
+
 }
 .screenshot-gallery {
   padding: 40px 20px;
   background: #000000;
   text-align: center;
 }
-.gallery-title {
-  font-family: 'Street-Graffity', sans-serif;
-  font-size: 42px;
-  color: #ffffff;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 8px rgb(56, 56, 56);
-}
+
 .screenshots {
   display: flex;
   flex-wrap: wrap;
@@ -107,7 +102,6 @@ body > header
   font-family: 'Street-Graffity';
   src: url('FONTS/Street-Graffity.ttf') format('truetype');
 }
-
 #main-header {
     height: 50px;
     background-color: rgb(0, 0, 0);
@@ -116,29 +110,47 @@ body > header
     z-index: 100;
 }
 
-#small-text {
-  letter-spacing: 1px;
-  font-size: 11px;
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #main-title {
   font-size: 81px;
   letter-spacing: 10px;
   font-family: 'Street-Graffity', sans-serif;
+  opacity: 0;
+  animation: floatIn 1s ease-out forwards;
 }
+
+#small-text {
+  letter-spacing: 1px;
+  font-size: 11px;
+  opacity: 0;
+  animation: floatIn 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+
 
 body{
 	background-color: black;
 }
 body > header > div.header-content-container > div.header-content > div.content-text
 {
-	bottom: calc(15% + 8rem);
+	bottom: calc(35% + 8rem);
 	left: 5%;
 	width: 32rem;
 }
 body > header > div.header-content-container > div.header-content > div.content-text.small
 {
-	bottom: calc(15% + 5rem);
+	bottom: calc(25% + 5rem);
 	width: 18rem;
 }
 body > header > div.header-content-container > div.header-content button
@@ -183,6 +195,12 @@ body > article#download-success-article div.thumbnail:first-of-type
 {
 	margin-left: 0;
 }
+body > article#download-success-article div.thumbnail:last-of-type
+{
+	margin-right: 0;
+}
+
+
 body > article#download-success-article div.thumbnail:last-of-type
 {
 	margin-right: 0;
