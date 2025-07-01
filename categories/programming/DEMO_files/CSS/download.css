@@ -107,27 +107,25 @@ body > header
   font-family: 'Street-Graffity';
   src: url('FONTS/Street-Graffity.ttf') format('truetype');
 }
-#header {
-    height: 80px;
-    background-color: #0c1013;
-    -webkit-box-shadow: 0 0 19px 2px rgba(255, 255, 255, 0.91);
-    box-shadow: 0 0 19px 2px black;
+
+#main-header {
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    -webkit-box-shadow: 0 0 19px 2px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 100px 50px rgb(0, 0, 0);
     z-index: 100;
 }
 
-.graffiti-title {
-  font-family: 'Street-Graffity', sans-serif;
-  font-size: 100px;
-  color: #fff;
-  text-shadow: 2px 2px 5px rgba(143, 143, 143, 0.6);
-  letter-spacing: 2px;
-  bottom: calc(15% + 8rem);
-  left: 5%;
-  width: 32rem;
-  margin-left: 3%;
-  margin-top: 15rem;
+#small-text {
+  letter-spacing: 1px;
+  font-size: 11px;
 }
 
+#main-title {
+  font-size: 81px;
+  letter-spacing: 10px;
+  font-family: 'Street-Graffity', sans-serif;
+}
 
 body{
 	background-color: black;
