@@ -139,7 +139,7 @@ body {
   box-sizing: border-box;
 
   color: rgb(255, 255, 255);
-  text-shadow: 0 0 10px #d000ff;
+  text-shadow: 0 0 10px #000000;
 }
 
 #hello {
@@ -161,7 +161,7 @@ body {
 }
 
 #hello h3 {
-	color: rgb(191, 191, 191);
+	color: rgb(242, 242, 242);
 	font-size: 1.25rem;
 	margin-top: 1rem;
 	animation: slideInLeft 1.2s ease-out;
